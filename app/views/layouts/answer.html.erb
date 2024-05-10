@@ -1,0 +1,11 @@
+<!-- app/views/questions/answer_form.html.erb -->
+<h1>Answer Form</h1>
+<%= form_with(model: @question, url: '/submit_answer', method: 'post') do |form| %>
+  <div>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit 'Submit Answer' %>
+  </div>
+<% end %>
